@@ -16,13 +16,13 @@ const fullName = function (firstName, lastName) {
 
 const longestString = function (string1, string2, string3) {
 	if (string1.length > string2.length && string1.length > string3.length) {
-		const result = string1;
+		return string1;
 	}
 	else if (string2.length > string1.length && string2.length > string3.length) {
-		result = string2;
+		return string2;
 	}
 	else if (string3.length > string1.length && string3.length > string2.length) {
-		result = string3;
+		return string3;
 	}
 	else {
 		return "There is no string that is the longest";
@@ -48,7 +48,10 @@ const firstTruethy = function (a, b , c) {
 	else if (b) {
 		return b;
 	}
-	else {
+	else if (c) {
 		return c;
+	}
+	else {
+		return "No truthy values";
 	}
 };
